@@ -46,7 +46,6 @@ require_once (PATH_MODELS . "DB_scrap.php");
 
 require_once (PATH_LIB      . "simple_html_dom.php");
 require_once (PATH_LIB      . "darkmiata_lib.php");
-//require_once (PATH_LIB      . "drk_logger.php");
 
 require_once (PATH_CONTROL  . "scrap.php");
 require_once (PATH_CONTROL  . "DBController.php");
@@ -55,4 +54,3 @@ require_once (PATH_CONTROL  . "DBController.php");
 
 require_once (PATH_CLASS . "Article.php");
 require_once (PATH_CLASS . "Categorie.php");
-//require_once (PATH_CLASS . "WebSite.php");

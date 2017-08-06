@@ -3,24 +3,22 @@
 /**
  *
  */
-
 // ================================
 function progessBat($index, $total) {
 
-
 }
 // ------------------------
-function debugCLI ($string) {
+function debugCLI($string) {
   if (DEBUGCLI === TRUE) {
-    echo ($string."\n");
+    echo ($string . "\n");
   }
 }
 // ------------------------
-function echln ($text) {
-  echo ($text."\n");
+function echln($text) {
+  echo ($text . "\n");
 }
 // ------------------------
-function cleanString ($string, $deep = 5) {
+function cleanString($string, $deep = 5) {
   $string = trim($string);
   $string = str_replace("\n", "", $string);
   $string = str_replace("\r", "", $string);
@@ -39,14 +37,14 @@ function cleanString ($string, $deep = 5) {
  * @param type $directory
  * @return type
  */
-function loadAndSaveHTML ($url, $directory, $return) {
+function loadAndSaveHTML($url, $directory, $return) {
   $fileName = explode("/", $url);
   $fileName = end($fileName);
 
   $fileExtension = explode(".", $fileName)[1];
 
   if ($fileExtension != "html") {
-    throw new Exception("Le type de fichier attendu doit être en HTML - fichier: ".$fileName);
+    throw new Exception("Le type de fichier attendu doit être en HTML - fichier: " . $fileName);
   }
 
   $localFile = $directory . $fileName;
@@ -56,7 +54,8 @@ function loadAndSaveHTML ($url, $directory, $return) {
   if (file_exists($localFile) == FALSE) {
     $html = file_get_html($url);
     file_put_contents($localFile, $html);
-  } else {
+  }
+  else {
     if ($return == TRUE) {
       $html = file_get_html($localFile);
     }
@@ -69,5 +68,3 @@ function loadAndSaveHTML ($url, $directory, $return) {
 
   return $html;
 }
-
-
