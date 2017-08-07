@@ -35,7 +35,7 @@ function argumentsController(array $argv) {
       break;
 
     case 'scanlistcat':
-      scanSaveCatsAction();
+      scanSaveCats();
       break;
 
     case 'scanall':
@@ -264,7 +264,7 @@ function scrapCategories() {
   return $categories;
 }
 // ------------------------
-function scanSaveCatsAction() {
+function scanSaveCats() {
   $cats = scrapCategories();  // Récup des Cats en array
   catsArrayToDB($cats);       // Sauvegarde en DB
 
